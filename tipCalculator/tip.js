@@ -1,3 +1,6 @@
+// set height of the divs to be the same
+$('.tip_section').height($('.bill_section').height());
+
 $(function(){
   // target the button first. use the button's class
   $('.submit_button').on('click', function(){
