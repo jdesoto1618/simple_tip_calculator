@@ -15,6 +15,10 @@ body {
 .bill_section {
   background: #d3d3d3;
   border: 2px solid black;
+  margin-left: 16.8em;
+  width: 340px;
+  padding: 5px 20px;
+  box-shadow: 1px 3px 5px #aaa;
 }
 
 /* set custom borde styles for tip section */
@@ -23,11 +27,14 @@ body {
   border-style: solid;
   border-color: black;
   border-width: 2px 2px 2px 0;
+  width: 340px;
+  padding: 5px 20px;
+  box-shadow: 1px 3px 5px #aaa;
 }
 
 /* set styles for tip h3 */
 .tip {
-  margin-top: 18%;
+  margin-top: 15%;
 }
 
 /* set styles for total h3 */
@@ -44,11 +51,13 @@ body {
 /* set styles for tip amount field */
 .tip_amount {
   font-weight: bold;
+  font-size: 16px;
 }
 
 /* set styles for total field */
 .total_bill {
   font-weight: bold;
+  font-size: 16px;
   color: #f01a07;
   margin-bottom: 20px;
 }
@@ -58,14 +67,21 @@ body {
   margin-left: 15.4%;
 }
 
+/* set styles for disabled input fields */
+.form-control[disabled] {
+  background: #fff;
+}
+
 /* set styles for generate bill button */
 .submit_button {
   margin-top: 20px;
+  margin-left: 2em;
   font-weight: bold;
   font-size: 20px;
   border: none;
   /* set same width for this button and the start over button */
-  width: 148px;
+  /*width: 148px;*/
+  width: 338px;
 }
 
 /* set styles for clear page button */
@@ -75,7 +91,8 @@ body {
   font-size: 20px;
   border: none;
   /* set same width for this button and the generate bill button */
-  width: 148px;
+  /*width: 148px;*/
+  width: 338px;
 }
 
 /* set styles for form-control focus */
@@ -84,39 +101,106 @@ body {
   box-shadow: 0 0 8px #f01a07;
 }
 
-
 /* set media queries to handle div resizing because of text */
-/*@media only screen and (width: 991px) {
-  .tip_section {
-    height: 320px;
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .bill_section {
+    margin-left: 19.8vw;
+  }
+
+  .submit_div {
+    margin-left: 18.3vw;
+  }
+
+  .submit_button {
+    margin-left: 0;
+    width: 281px;
+  }
+
+  .clear_button {
+    width: 281px;
   }
 }
 
-@media only screen and (width: 768px) {
-  .tip_section {
-    height: 346px;
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .bill_section {
+    width: 200px;
+    margin-left: 21vw;
   }
-}*/
+
+  .submit_div {
+    margin-left: 24vw;
+  }
+
+  .submit_button {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .bill_section {
+    margin-left: 21vw;
+  }
+
+  .submit_div {
+    margin-left: 23vw;
+  }
+}
 
 /* set sizes, styles for mobile screens */
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 439px) and (max-width: 480px) {
   .bill_section {
-    margin-left: 2.7em;
+    margin-left: 8vw;
+    width: 50%;
   }
 
-  .bill_section,
   .tip_section {
-    width: 200px;
+    width: 33%;
+  }
+
+  .submit_div {
+    width: 100%;
+    margin-left: 4.5vw;
   }
 
   .submit_button,
   .clear_button {
     display: block;
-    width: 100%;
-    margin-left: 5px;
+    width: 89%;
+    margin-left: 0;
   }
 
   .tip {
     margin-top: 30%;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 438px) {
+  .bill_section,
+  .tip_section {
+    width: 95%;
+    margin: 5px 0px 5px 9px;
+    padding: 0 40px;
+  }
+
+  .tip_section {
+    border: 2px solid black;
+    height: auto;
+  }
+
+  .tip {
+    margin-top: 5vh;
+  }
+
+  .submit_div {
+    width: 100%;
+    margin-left: -5px;
+    padding-right: 0;
+  }
+
+  .submit_button,
+  .clear_button {
+    display: block;
+    width: 98.3%;
+    margin-left: 0;
   }
 }
