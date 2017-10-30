@@ -1,7 +1,13 @@
+/* set background color for page */
+body {
+  background: #fbefd5;
+}
+
 /* set styles for page title */
 .title {
-  color: green;
-  margin-top: 75px;
+  /* set title text color to same color as submit button background from bootstrap btn btn-primary */
+  color: #286090;
+  margin-top: 25px;
   margin-bottom: 30px;
 }
 
@@ -21,7 +27,7 @@
 
 /* set styles for tip h3 */
 .tip {
-  margin-top: 15%;
+  margin-top: 18%;
 }
 
 /* set styles for total h3 */
@@ -37,12 +43,13 @@
 
 /* set styles for tip amount field */
 .tip_amount {
-  /*margin-left: 17%;*/
+  font-weight: bold;
 }
 
 /* set styles for total field */
 .total_bill {
-  /*margin-left: 17%;*/
+  font-weight: bold;
+  color: #f01a07;
   margin-bottom: 20px;
 }
 
@@ -57,6 +64,8 @@
   font-weight: bold;
   font-size: 20px;
   border: none;
+  /* set same width for this button and the start over button */
+  width: 148px;
 }
 
 /* set styles for clear page button */
@@ -65,10 +74,19 @@
   font-weight: bold;
   font-size: 20px;
   border: none;
+  /* set same width for this button and the generate bill button */
+  width: 148px;
 }
 
+/* set styles for form-control focus */
+.form-control:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 8px #f01a07;
+}
+
+
 /* set media queries to handle div resizing because of text */
-@media only screen and (width: 991px) {
+/*@media only screen and (width: 991px) {
   .tip_section {
     height: 320px;
   }
@@ -77,5 +95,28 @@
 @media only screen and (width: 768px) {
   .tip_section {
     height: 346px;
+  }
+}*/
+
+/* set sizes, styles for mobile screens */
+@media only screen and (max-width: 480px) {
+  .bill_section {
+    margin-left: 2.7em;
+  }
+
+  .bill_section,
+  .tip_section {
+    width: 200px;
+  }
+
+  .submit_button,
+  .clear_button {
+    display: block;
+    width: 100%;
+    margin-left: 5px;
+  }
+
+  .tip {
+    margin-top: 30%;
   }
 }
