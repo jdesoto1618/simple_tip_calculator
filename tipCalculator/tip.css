@@ -16,9 +16,15 @@ body {
   background: #d3d3d3;
   border: 2px solid black;
   margin-left: 16.8em;
+  height: 50vh;
   width: 340px;
   padding: 5px 20px;
   box-shadow: 1px 3px 5px #aaa;
+}
+
+/* set style for split bill h3 */
+.italic {
+  font-style: italic;
 }
 
 /* set custom borde styles for tip section */
@@ -27,6 +33,7 @@ body {
   border-style: solid;
   border-color: black;
   border-width: 2px 2px 2px 0;
+  height: 50vh;
   width: 340px;
   padding: 5px 20px;
   box-shadow: 1px 3px 5px #aaa;
@@ -51,15 +58,23 @@ body {
 /* set styles for tip amount field */
 .tip_amount {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
+  height: 40px;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* set styles for total field */
 .total_bill {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   color: #f01a07;
   margin-bottom: 20px;
+  height: 40px;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* set styles for submit div */
@@ -99,6 +114,22 @@ body {
 .form-control:focus {
   border-color: #aaa;
   box-shadow: 0 0 8px #f01a07;
+}
+
+/* set styles for select dropdown input */
+.tip_percent {
+  border: none;
+  border-radius: 4px;
+  height: 34px;
+}
+
+/* set same styles for select dropdown as inputs */
+select:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 8px #f01a07;
+  /* remove default blue outline on inputs/selects */
+  outline: 0;
+
 }
 
 /* set media queries to handle div resizing because of text */
@@ -188,7 +219,7 @@ body {
   }
 
   .tip {
-    margin-top: 5vh;
+    margin-top: 8.5vh;
   }
 
   .submit_div {
