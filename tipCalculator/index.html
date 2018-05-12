@@ -17,7 +17,7 @@
           <h3>Bill</h3>
           <input class="form-control bill_amount" type="text" placeholder="$0.00">
           <h3>Tip %</h3>
-          <select class="tip_percent">
+          <select class=" form-control tip_percent">
             <option value="0">No Tip</option>
             <option value="5">5%</option>
             <option value="10">10%</option>
@@ -25,14 +25,30 @@
             <option value="20">20%</option>
             <option value="25">25%</option>
           </select>
-          <!-- <input class="form-control tip_percent" type="text" placeholder="%"> -->
           <h3>Split Bill?</h3>
-          <input class="form-control people" type="number" placeholder="Number of People">
+          <!-- <input class="form-control people" type="number" placeholder="Number of People"> -->
+          <select class="form-control people">
+            <option value="0">No Split</option>
+            <option value="2">2 people</option>
+            <option value="3">3 people</option>
+            <option value="4">4 people</option>
+            <option value="5">5 people</option>
+            <option value="6">6 people</option>
+            <option value="7">7 people</option>
+            <option value="8">8 people</option>
+            <option value="9">9 people</option>
+            <option value="10">10 people</option>
+            <option value="11">11 people</option>
+            <option value="12">12 people</option>
+            <option value="13">13 people</option>
+            <option value="14">14 people</option>
+            <option value="15">15 people</option>
+          </select>
         </div> <!-- closes col-xs-5 div -->
         <div class="form-group col-xs-4 tip_section">
-          <h3 class="text-center tip">Tip Amount</h3>
+          <h3 class="text-center tip">Total Tip</h3>
           <input class="form-control tip_amount" type="text" disabled>
-          <h3 class="text-center total">Total Bill</h3>
+          <h3 class="text-center total">Total <span class="italic"></span> Bill</h3>
           <input class="form-control total_bill" type="text" disabled>
         </div><!--closes col-xs-3 -->
       </div><!--closes row div-->
@@ -51,3 +67,12 @@
     <script src="tip.js"></script>
   </body>
 </html>
+<!-- TODO:
+  make sure site is responsive. try percentages and also add a viewport meta tag in the head
+  make sure input values can't be text. front-end validation?
+  consider using another front end framework, perhaps implement angular?
+  it's been said using the select tag is generally not ok, look for alternate solution. this is a dropdown, so need something else which gives dropdown options
+  there must have been a reason I used input type text instead of number, maybe number input becomes number select dropdown?
+  check code formatting
+  add comments to code, there are almost none present in the markup
+-->
