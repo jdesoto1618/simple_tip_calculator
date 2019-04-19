@@ -1,86 +1,88 @@
-/* set background color for page */
-body {
+/* background color */
+html, body {
+  box-sizing: border-box;
   background: #fbefd5;
 }
 
-/* set styles for page title */
-.title {
-  /* set title text color to same color as submit button background from bootstrap btn btn-primary */
-  color: #286090;
-  margin-top: 25px;
-  margin-bottom: 30px;
+/* sizing for all box elements */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-/* set styles for bill section input */
-.bill_section {
+/* styles for page title */
+.title {
+  /* same color as btn-primary */
+  color: #286090;
+  margin: 25px 0 25px 0;
+}
+
+/* set display type for dom objects */
+h3,
+.form-control {
+  display: inline-block;
+  margin: 0;
+}
+
+/* input field sizes */
+.form-control {
+  width: 30%;
+  height: 40px;
+  /* when removing the extra border radius setting on tip_percent, add a rule here for the border radius. this will change them all at once */
+}
+
+/* styles for bill section input */
+.bill_div {
   background: #d3d3d3;
   border: 2px solid black;
-  margin-left: 16.8em;
-  height: 50vh;
-  width: 340px;
-  padding: 5px 20px;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
   box-shadow: 1px 3px 5px #aaa;
 }
 
-/* set style for split bill h3 */
-.italic {
-  font-style: italic;
+/* padding for bill h3 */
+.bill_h3 {
+  padding-top: 20px;
 }
 
-/* set custom borde styles for tip section */
-.tip_section {
-  background: #d3d3d3;
-  border-style: solid;
-  border-color: black;
-  border-width: 2px 2px 2px 0;
-  height: 50vh;
-  width: 340px;
-  padding: 5px 20px;
-  box-shadow: 1px 3px 5px #aaa;
-}
-
-/* set styles for tip h3 */
-.tip {
-  margin-top: 15%;
-}
-
-/* set styles for total h3 */
-.total {
-  margin-top: 50px;
-  font-weight: bold;
-}
-
-/* set styles for people number input */
+/* styles for split bill h3 and input field */
+/* .split,
 .people {
-  margin-bottom: 20px;
-}
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+} */
 
 /* set styles for tip amount field */
 .tip_amount {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 20px;
-  height: 40px;
-  width: 100px;
-  margin: 0 auto;
-  text-align: center;
+}
+
+/* styles for tip_percent dropdown */
+.tip_percent {
+  color: #999;
 }
 
 /* set styles for total field */
 .total_bill {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 20px;
   color: #f01a07;
-  margin-bottom: 20px;
-  height: 40px;
-  width: 100px;
-  margin: 0 auto;
-  text-align: center;
 }
 
-/* set styles for submit div */
-.submit_div {
-  margin-left: 15.4%;
+/* styles for bill_tip div */
+.bill_tip,
+.tip_total {
+  margin-top: 20px;
 }
+
+/* styles for tip_total div */
+/* .tip_total {
+  margin-top: 10px;
+} */
 
 /* set styles for disabled input fields */
 .form-control[disabled] {
@@ -89,25 +91,10 @@ body {
 
 /* set styles for generate bill button */
 .submit_button {
-  margin-top: 20px;
-  margin-left: 2em;
   font-weight: bold;
   font-size: 20px;
   border: none;
-  /* set same width for this button and the start over button */
-  /*width: 148px;*/
-  width: 338px;
-}
-
-/* set styles for clear page button */
-.clear_button {
-  margin-top: 20px;
-  font-weight: bold;
-  font-size: 20px;
-  border: none;
-  /* set same width for this button and the generate bill button */
-  /*width: 148px;*/
-  width: 338px;
+  outline: none;
 }
 
 /* set styles for form-control focus */
@@ -116,12 +103,11 @@ body {
   box-shadow: 0 0 8px #f01a07;
 }
 
-/* set styles for select dropdown input */
-.tip_percent {
+/* remove this! set styles for select dropdown input */
+/* .tip_percent {
   border: none;
   border-radius: 4px;
-  height: 34px;
-}
+} */
 
 /* set same styles for select dropdown as inputs */
 select:focus {
@@ -129,12 +115,22 @@ select:focus {
   box-shadow: 0 0 8px #f01a07;
   /* remove default blue outline on inputs/selects */
   outline: 0;
+}
 
+/* styles for calculate tip button and bottom padding */
+.button_div {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* calculate button styling */
+.btn {
+  margin-top: 20px;
 }
 
 /* set media queries to handle div resizing because of text */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .bill_section {
+  .bill_div {
     margin-left: 19.8vw;
   }
 
@@ -153,7 +149,7 @@ select:focus {
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  .bill_section {
+  .bill_div {
     width: 200px;
     margin-left: 21vw;
   }
@@ -167,19 +163,19 @@ select:focus {
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 991px) {
-  .bill_section {
+/* @media only screen and (min-width: 769px) and (max-width: 991px) {
+  .bill_div {
     margin-left: 21vw;
   }
 
   .submit_div {
     margin-left: 23vw;
   }
-}
+} */
 
 /* set sizes, styles for mobile screens */
 @media only screen and (min-width: 439px) and (max-width: 480px) {
-  .bill_section {
+  .bill_div {
     margin-left: 8vw;
     width: 50%;
   }
@@ -206,7 +202,7 @@ select:focus {
 }
 
 @media only screen and (min-width: 100px) and (max-width: 438px) {
-  .bill_section,
+  .bill_div,
   .tip_section {
     width: 95%;
     margin: 5px 0px 5px 9px;
