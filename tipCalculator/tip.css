@@ -47,14 +47,6 @@ h3,
   padding-top: 20px;
 }
 
-/* styles for split bill h3 and input field */
-/* .split,
-.people {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-} */
-
 /* set styles for tip amount field */
 .tip_amount {
   /* font-weight: bold; */
@@ -79,14 +71,14 @@ h3,
   margin-top: 20px;
 }
 
-/* styles for tip_total div */
-/* .tip_total {
-  margin-top: 10px;
-} */
-
 /* set styles for disabled input fields */
 .form-control[disabled] {
   background: #fff;
+}
+
+/* styles for calculate tip button and bottom padding */
+.button_div {
+  text-align: center;
 }
 
 /* set styles for generate bill button */
@@ -95,37 +87,18 @@ h3,
   font-size: 20px;
   border: none;
   outline: none;
+  margin: 20px 0;
+}
+
+.submit_button:focus,
+.submit_button:active:focus {
+  outline: none;
 }
 
 /* set styles for form-control focus */
 .form-control:focus {
   border-color: #aaa;
   box-shadow: 0 0 8px #f01a07;
-}
-
-/* remove this! set styles for select dropdown input */
-/* .tip_percent {
-  border: none;
-  border-radius: 4px;
-} */
-
-/* set same styles for select dropdown as inputs */
-select:focus {
-  border-color: #aaa;
-  box-shadow: 0 0 8px #f01a07;
-  /* remove default blue outline on inputs/selects */
-  outline: 0;
-}
-
-/* styles for calculate tip button and bottom padding */
-.button_div {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-/* calculate button styling */
-.btn {
-  margin-top: 20px;
 }
 
 /* set media queries to handle div resizing because of text */
