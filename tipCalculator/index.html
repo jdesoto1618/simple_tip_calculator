@@ -5,60 +5,44 @@
     <title>Tip Calculator</title>
     <!-- Bootstrap 3 CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- set viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css file link -->
     <link rel="stylesheet" href="tip.css">
   </head>
   <body>
-    <h1 class="text-center title">Super-Duper Helpful Tip Figure-Outer</h1>
+    <h1 class="text-center title">Tip Calculator</h1>
     <div class="container">
       <div class="row">
-        <div class="form-group col-xs-4 bill_section">
-          <h3>Bill</h3>
-          <input class="form-control bill_amount" type="text" placeholder="$0.00">
-          <h3>Tip %</h3>
-          <select class=" form-control tip_percent">
-            <option value="0">No Tip</option>
-            <option value="5">5%</option>
-            <option value="10">10%</option>
-            <option value="15">15%</option>
-            <option value="20">20%</option>
-            <option value="25">25%</option>
-          </select>
-          <h3>Split Bill?</h3>
-          <!-- <input class="form-control people" type="number" placeholder="Number of People"> -->
-          <select class="form-control people">
-            <option value="0">No Split</option>
-            <option value="2">2 people</option>
-            <option value="3">3 people</option>
-            <option value="4">4 people</option>
-            <option value="5">5 people</option>
-            <option value="6">6 people</option>
-            <option value="7">7 people</option>
-            <option value="8">8 people</option>
-            <option value="9">9 people</option>
-            <option value="10">10 people</option>
-            <option value="11">11 people</option>
-            <option value="12">12 people</option>
-            <option value="13">13 people</option>
-            <option value="14">14 people</option>
-            <option value="15">15 people</option>
-          </select>
-        </div> <!-- closes col-xs-5 div -->
-        <div class="form-group col-xs-4 tip_section">
-          <h3 class="text-center tip">Total Tip</h3>
-          <input class="form-control tip_amount" type="text" disabled>
-          <h3 class="text-center total">Total <span class="italic"></span> Bill</h3>
-          <input class="form-control total_bill" type="text" disabled>
-        </div><!--closes col-xs-3 -->
-      </div><!--closes row div-->
-      <div class="row">
-        <div class="col-xs-8 submit_div">
-          <button type="submit" class="btn btn-primary submit_button">Calculate Tip</button>
-          <button type="submit" class="btn btn-success clear_button" onclick="window.location.reload()">Start Over</button>
-        </div>
-      </div>
-    </div><!--closes container div-->
+        <div class="form-group bill_div">
+          <div class="bill_tip">
+            <!-- <h3 class="bill_h3">Bill</h3> -->
+            <input class="form-control bill_amount" type="text" placeholder="Bill $0.00">
+            <!-- <h3>Tip %</h3> -->
+            <select class=" form-control tip_percent">
+              <option value="" selected disabled>Tip %</option>
+              <option value="0">No Tip</option>
+              <option value="5">5%</option>
+              <option value="10">10%</option>
+              <option value="15">15%</option>
+              <option value="20">20%</option>
+              <option value="25">25%</option>
+            </select>
+          </div> <!-- ends bill_tip -->
+
+          <div class="tip_total">
+            <!-- <h3>Tip</h3> -->
+            <input class="form-control tip_amount" type="text" disabled placeholder="Tip Amount">
+            <!-- <h3><strong>Total</strong></h3> -->
+            <input class="form-control total_bill" type="text" disabled placeholder="Total">
+          </div> <!-- ends tip_total -->
+
+          <div class="button_div">
+            <button type="button" class="btn btn-primary submit_button">Calculate Tip</button>
+          </div> <!-- ends button_div -->
+        </div> <!-- ends bill_div -->
+      </div> <!-- ends row div -->
+    </div> <!-- ends container div -->
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
@@ -76,4 +60,12 @@
   check code formatting
   add comments to code, there are almost none present in the markup
   make fields showing tip values and total bill larger
+
+  completely redo media queries. remove all the extra ones
+  change background color to white, make input borders soft blue or light grey
+  change red outline on active and or focus state. softer color, maybe use as an input field background, like in the mA signal converter program
+  change border radius for div
+  update border radius to 6px for all elements
+  change to form with form elements
+  adjust color of select options based on value? set initial color using css, change color if a value is not 0 or empty string, or whatever the value is at first before a selection is made
 -->
