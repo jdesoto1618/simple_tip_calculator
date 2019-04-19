@@ -13,23 +13,30 @@ html, body {
 
 /* styles for page title */
 .title {
-  /* same color as btn-primary */
   color: #286090;
   margin: 25px 0 25px 0;
 }
 
-/* set display type for dom objects */
-h3,
+/* styles for input fields */
 .form-control {
-  display: inline-block;
   margin: 0;
-}
-
-/* input field sizes */
-.form-control {
+  display: inline-block;
   width: 30%;
   height: 40px;
+  color: #999;
   /* when removing the extra border radius setting on tip_percent, add a rule here for the border radius. this will change them all at once */
+}
+
+/* set styles for disabled input fields */
+.form-control[disabled] {
+  background: #fff;
+}
+
+/* set styles for form-control focus */
+.form-control:focus {
+  /* override bootstrap input focus border */
+  border: 1px solid #99dcdd;
+  box-shadow: 0 0 8px #99dcdd;
 }
 
 /* styles for bill section input */
@@ -42,25 +49,13 @@ h3,
   box-shadow: 1px 3px 5px #aaa;
 }
 
-/* padding for bill h3 */
-.bill_h3 {
-  padding-top: 20px;
-}
-
 /* set styles for tip amount field */
 .tip_amount {
-  /* font-weight: bold; */
   font-size: 20px;
-}
-
-/* styles for tip_percent dropdown */
-.tip_percent {
-  color: #999;
 }
 
 /* set styles for total field */
 .total_bill {
-  /* font-weight: bold; */
   font-size: 20px;
   color: #f01a07;
 }
@@ -71,10 +66,6 @@ h3,
   margin-top: 20px;
 }
 
-/* set styles for disabled input fields */
-.form-control[disabled] {
-  background: #fff;
-}
 
 /* styles for calculate tip button and bottom padding */
 .button_div {
@@ -93,12 +84,6 @@ h3,
 .submit_button:focus,
 .submit_button:active:focus {
   outline: none;
-}
-
-/* set styles for form-control focus */
-.form-control:focus {
-  border-color: #aaa;
-  box-shadow: 0 0 8px #f01a07;
 }
 
 /* set media queries to handle div resizing because of text */
