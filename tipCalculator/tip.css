@@ -1,7 +1,7 @@
 /* background color */
 html, body {
   box-sizing: border-box;
-  background: #fbefd5;
+  background: #fff;
 }
 
 /* sizing for all box elements */
@@ -17,6 +17,11 @@ html, body {
   margin: 25px 0 25px 0;
 }
 
+/* styles for container div */
+.container {
+  width: 100%;
+}
+
 /* styles for input fields */
 .form-control {
   margin: 0;
@@ -24,7 +29,6 @@ html, body {
   width: 30%;
   height: 40px;
   color: #999;
-  /* when removing the extra border radius setting on tip_percent, add a rule here for the border radius. this will change them all at once */
 }
 
 /* set styles for disabled input fields */
@@ -34,158 +38,84 @@ html, body {
 
 /* set styles for form-control focus */
 .form-control:focus {
-  /* override bootstrap input focus border */
   border: 1px solid #99dcdd;
   box-shadow: 0 0 8px #99dcdd;
 }
 
-/* styles for bill section input */
+/* styles for bill div */
 .bill_div {
-  background: #d3d3d3;
+  background: #eee;
   border: 2px solid black;
   margin: 0 auto;
   text-align: center;
   width: 50%;
+  height: 50vh;
   box-shadow: 1px 3px 5px #aaa;
 }
 
-/* set styles for tip amount field */
-.tip_amount {
-  font-size: 20px;
-}
-
-/* set styles for total field */
+/* set text color in total field */
 .total_bill {
-  font-size: 20px;
   color: #f01a07;
 }
 
-/* styles for bill_tip div */
+/* container div styles for input fields */
 .bill_tip,
 .tip_total {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-
-/* styles for calculate tip button and bottom padding */
+/* container div styles for calculate tip button */
 .button_div {
   text-align: center;
+  margin-top: 40px;
 }
 
-/* set styles for generate bill button */
+/* styles for calculate tip button */
 .submit_button {
   font-weight: bold;
   font-size: 20px;
   border: none;
   outline: none;
-  margin: 20px 0;
 }
 
+/* styles for calculate tip button pseudo classes */
 .submit_button:focus,
 .submit_button:active:focus {
   outline: none;
 }
 
-/* set media queries to handle div resizing because of text */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .bill_div {
-    margin-left: 19.8vw;
+/* tablet media query */
+@media only screen and (max-width: 768px) {
+  /* styles for input fields on mobile */
+  .form-control {
+    width: 35%;
   }
 
-  .submit_div {
-    margin-left: 18.3vw;
+  .title {
+    font-size: 32px;
+  }
+
+  .bill_div {
+    margin: 0 auto;
+    width: 70vw;
+    height: 85vh;
+  }
+}
+
+/* mobile media query */
+@media only screen and (max-width: 480px) {
+  /* styles for input fields on mobile */
+  .form-control {
+    width: 40%;
+    font-size: 12px;
+  }
+
+  .bill_div {
+    margin: 0 auto;
+    width: 70vw;
   }
 
   .submit_button {
-    margin-left: 0;
-    width: 281px;
-  }
-
-  .clear_button {
-    width: 281px;
-  }
-}
-
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-  .bill_div {
-    width: 200px;
-    margin-left: 21vw;
-  }
-
-  .submit_div {
-    margin-left: 24vw;
-  }
-
-  .submit_button {
-    margin-left: 0;
-  }
-}
-
-/* @media only screen and (min-width: 769px) and (max-width: 991px) {
-  .bill_div {
-    margin-left: 21vw;
-  }
-
-  .submit_div {
-    margin-left: 23vw;
-  }
-} */
-
-/* set sizes, styles for mobile screens */
-@media only screen and (min-width: 439px) and (max-width: 480px) {
-  .bill_div {
-    margin-left: 8vw;
-    width: 50%;
-  }
-
-  .tip_section {
-    width: 33%;
-  }
-
-  .submit_div {
-    width: 100%;
-    margin-left: 4.5vw;
-  }
-
-  .submit_button,
-  .clear_button {
-    display: block;
-    width: 89%;
-    margin-left: 0;
-  }
-
-  .tip {
-    margin-top: 30%;
-  }
-}
-
-@media only screen and (min-width: 100px) and (max-width: 438px) {
-  .bill_div,
-  .tip_section {
-    width: 95%;
-    margin: 5px 0px 5px 9px;
-    padding: 0 40px;
-  }
-
-  .tip_section {
-    border: 2px solid black;
-    height: auto;
-  }
-
-  .tip {
-    margin-top: 8.5vh;
-  }
-
-  .submit_div {
-    width: 100%;
-    margin-left: -5px;
-    padding-right: 0;
-  }
-
-  .submit_button,
-  .clear_button {
-    display: block;
-    width: 98.3%;
-    margin-left: 0;
+    font-size: 18px;
   }
 }
