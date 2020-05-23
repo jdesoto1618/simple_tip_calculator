@@ -17,9 +17,9 @@ html, body {
   margin: 25px 0 25px 0;
 }
 
-/* styles for container div */
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* styles for input fields */
