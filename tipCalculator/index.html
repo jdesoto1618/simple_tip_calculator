@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Tip Calculator</title>
-    <!-- Bootstrap 3 cdn -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- set viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css file link -->
     <link rel="stylesheet" href="tip.css">
   </head>
   <body>
@@ -27,39 +24,29 @@
               <option value="20">20%</option>
               <option value="25">25%</option>
             </select>
-          </div> <!-- ends bill_tip -->
+          </div>
 
           <div class="tip_total">
             <input class="form-control tip_amount" type="text" disabled placeholder="Tip Amount">
             <input class="form-control total_bill" type="text" disabled placeholder="Total">
-          </div> <!-- ends tip_total -->
+          </div>
 
           <div class="button_div">
             <button type="button" class="btn btn-primary submit_button">Calculate Tip</button>
-          </div> <!-- ends button_div -->
-        </div> <!-- ends bill_div -->
-      </div> <!-- ends row div -->
-    </div> <!-- ends container div -->
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- jQuery cdn -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <!-- bootstrap js script file cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="tip.js"></script>
   </body>
 </html>
 <!-- TODO:
-  make sure site is responsive. try percentages and also add a viewport meta tag in the head
-  make sure input values can't be text. front-end validation?
-  consider using another front end framework, perhaps implement angular?
+  make sure input values can't be text
   it's been said using the select tag is generally not ok, look for alternate solution. this is a dropdown, so need something else which gives dropdown options
-  there must have been a reason I used input type text instead of number, maybe number input becomes number select dropdown?
-  check code formatting
-  add comments to code, there are almost none present in the markup
-  make fields showing tip values and total bill larger
-
 
   change to form with form elements
   adjust color of select options based on value? set initial color using css, change color if a value is not 0 or empty string, or whatever the value is at first before a selection is made
-  switch to css grid 
 -->
