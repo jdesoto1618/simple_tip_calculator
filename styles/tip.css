@@ -1,7 +1,7 @@
-/* background color */
 html, body {
   box-sizing: border-box;
   background: #fff;
+  font-size: 62.5%;
 }
 
 /* sizing for all box elements */
@@ -73,7 +73,7 @@ html, body {
 /* styles for calculate tip button */
 .submit_button {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2rem;
   border: none;
   outline: none;
 }
@@ -92,7 +92,7 @@ html, body {
   }
 
   .title {
-    font-size: 32px;
+    font-size: 3.2rem;
   }
 
   .bill_div {
@@ -107,7 +107,7 @@ html, body {
   /* styles for input fields on mobile */
   .form-control {
     width: 40%;
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 
   .bill_div {
@@ -116,6 +116,6 @@ html, body {
   }
 
   .submit_button {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
