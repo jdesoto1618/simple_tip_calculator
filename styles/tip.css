@@ -1,7 +1,9 @@
-/* background color */
 html, body {
   box-sizing: border-box;
   background: #fff;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
 }
 
 /* sizing for all box elements */
@@ -17,9 +19,15 @@ html, body {
   margin: 25px 0 25px 0;
 }
 
-/* styles for container div */
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 /* styles for input fields */
@@ -46,7 +54,7 @@ html, body {
 .bill_div {
   background: #eee;
   border: 2px solid black;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
   width: 50%;
   height: 50vh;
@@ -73,7 +81,7 @@ html, body {
 /* styles for calculate tip button */
 .submit_button {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2rem;
   border: none;
   outline: none;
 }
@@ -92,11 +100,11 @@ html, body {
   }
 
   .title {
-    font-size: 32px;
+    font-size: 3.2rem;
   }
 
   .bill_div {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: 70vw;
     height: 85vh;
   }
@@ -107,15 +115,15 @@ html, body {
   /* styles for input fields on mobile */
   .form-control {
     width: 40%;
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 
   .bill_div {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     width: 70vw;
   }
 
   .submit_button {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
