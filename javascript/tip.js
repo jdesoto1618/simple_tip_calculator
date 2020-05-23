@@ -18,4 +18,4 @@ $(document).ready(function(){
       $('.total_bill').val((totalBill).toFixed(2));
     } // ends if
   }); // ends onclick function
-}) 
+})
