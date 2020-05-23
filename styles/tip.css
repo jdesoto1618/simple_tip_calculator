@@ -2,26 +2,25 @@ html, body {
   box-sizing: border-box;
   background: #fff;
   font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* sizing for all box elements */
+:root {
+  --space-between-letters: 0.1rem;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* styles for page title */
 .title {
   color: #286090;
-  margin: 25px 0 25px 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
+  margin: 2.5rem 0;
+  font-size: 2.8rem;
 }
 
 .row {
@@ -30,13 +29,13 @@ html, body {
   margin: 0;
 }
 
-/* styles for input fields */
 .form-control {
-  margin: 0;
+  margin: 1rem 0;
   display: inline-block;
-  width: 30%;
-  height: 40px;
+  height: 4rem;
   color: #999;
+  font-size: 1.4rem;
+  letter-spacing: var(--space-between-letters);
 }
 
 /* set styles for disabled input fields */
@@ -54,76 +53,77 @@ html, body {
 .bill_div {
   background: #eee;
   border: 2px solid black;
-  /* margin: 0 auto; */
   text-align: center;
-  width: 50%;
-  height: 50vh;
   box-shadow: 1px 3px 5px #aaa;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  padding: 0 3rem;
 }
 
-/* set text color in total field */
 .total_bill {
   color: #f01a07;
 }
 
-/* container div styles for input fields */
-.bill_tip,
-.tip_total {
-  margin-top: 40px;
+.bill_tip {
+  margin-top: 4rem;
 }
 
-/* container div styles for calculate tip button */
+.tip_total {
+  margin-top: 2rem;
+}
+
 .button_div {
   text-align: center;
-  margin-top: 40px;
+  margin: 3rem 0 4rem 0;
 }
 
-/* styles for calculate tip button */
 .submit_button {
   font-weight: bold;
-  font-size: 2rem;
-  border: none;
+  font-size: 1.6rem;
+  border: 0.1rem solid transparent;
   outline: none;
+  transition: background 0.3s linear, color 0.3s linear;
+  letter-spacing: var(--space-between-letters);
+  padding: 0.8rem 0;
+  width: 15rem;
+}
+
+.submit_button:active {
+  border-color: #337ab7;
 }
 
 /* styles for calculate tip button pseudo classes */
 .submit_button:focus,
 .submit_button:active:focus {
   outline: none;
+  border: none;
 }
 
-/* tablet media query */
-@media only screen and (max-width: 768px) {
-  /* styles for input fields on mobile */
-  .form-control {
-    width: 35%;
-  }
-
+@media screen and (min-width: 40em) {
   .title {
     font-size: 3.2rem;
   }
-
-  .bill_div {
-    /* margin: 0 auto; */
-    width: 70vw;
-    height: 85vh;
-  }
 }
 
-/* mobile media query */
-@media only screen and (max-width: 480px) {
-  /* styles for input fields on mobile */
-  .form-control {
-    width: 40%;
-    font-size: 1.2rem;
+@media screen and (min-width: 64em) {
+  .bill_tip,
+  .tip_total {
+    display: flex;
   }
 
-  .bill_div {
-    /* margin: 0 auto; */
-    width: 70vw;
+  .form-control {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .submit_button {
     font-size: 1.8rem;
+    width: 17rem;
+  }
+
+  .submit_button:hover {
+    color: #337ab7;
+    border: 0.1rem solid #337ab7;
+    background: #fff;
   }
 }
