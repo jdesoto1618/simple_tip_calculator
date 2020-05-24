@@ -18,4 +18,26 @@ $(document).ready(function(){
       $('.total_bill').val((totalBill).toFixed(2));
     } // ends if
   }); // ends onclick function
+
+  getPercentSelect()[0].addEventListener('change', function(){
+    if(getPercentSelect()[1] === '0') {
+      getMessageAlert().style.display = 'block';
+      getPercentSelect()[0].classList.remove('has-value');
+      getPercentSelect()[0].classList.add('no-tip');
+    } else {
+      getMessageAlert().style.display = 'none';
+      getPercentSelect()[0].classList.remove('no-tip');
+      getPercentSelect()[0].classList.add('has-value');
+    }
+  });
+
+  function getPercentSelect() {
+    let percent = document.querySelector('.tip_percent');
+    return [percent, percent.value]
+  }
+
+  function getMessageAlert() {
+    let alert = document.querySelector('.alert-message');
+    return alert
+  }
 })
