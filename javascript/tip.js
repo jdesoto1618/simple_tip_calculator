@@ -24,10 +24,12 @@ $(document).ready(function(){
       getMessageAlert().style.display = 'block';
       getPercentSelect()[0].classList.remove('has-value');
       getPercentSelect()[0].classList.add('no-tip');
+      document.querySelector('.bill_tip').style.marginTop = '2rem';
     } else {
       getMessageAlert().style.display = 'none';
       getPercentSelect()[0].classList.remove('no-tip');
       getPercentSelect()[0].classList.add('has-value');
+      document.querySelector('.bill_tip').style.marginTop = '4rem';
     }
   });
 

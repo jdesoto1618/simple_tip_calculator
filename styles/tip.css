@@ -30,8 +30,9 @@ html, body {
 }
 
 .alert-message {
+  font-size: 1.6rem;
+  margin-top: 3rem;
   display: none;
-  font-size: 1.6rem
 }
 
 .form-control {
