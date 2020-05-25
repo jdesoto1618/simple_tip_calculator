@@ -21,6 +21,10 @@ $(document).ready(function(){
 
   getPercentSelect()[0].addEventListener('change', function(){
     let closeButton = getCloseButton();
+    let nullOption = document.querySelector('.tip_percent').children;
+    if(nullOption[0].value === ''){
+      nullOption[0].remove();
+    }
     if(getPercentSelect()[1] === '0') {
       getMessageAlert().style.display = 'block';
       getPercentSelect()[0].classList.remove('has-value');
