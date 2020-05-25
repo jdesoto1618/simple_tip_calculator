@@ -20,21 +20,29 @@ $(document).ready(function(){
   }); // ends onclick function
 
   getPercentSelect()[0].addEventListener('change', function(){
+    let closeButton = getCloseButton();
     if(getPercentSelect()[1] === '0') {
       getMessageAlert().style.display = 'block';
       getPercentSelect()[0].classList.remove('has-value');
       getPercentSelect()[0].classList.add('no-tip');
+      closeButton.style.display = 'block';
     } else {
       getMessageAlert().style.display = 'none';
       getPercentSelect()[0].classList.remove('no-tip');
       getPercentSelect()[0].classList.add('has-value');
+      closeButton.style.display = 'none';
     }
   });
 
-  // function getCloseButton() {
-  //   let closeButton = document.querySelector('.close-button');
-  //   return closeButton;
-  // }
+  getCloseButton().addEventListener('click', function(){
+    getCloseButton().style.display = 'none';
+    getMessageAlert().style.display = 'none';
+  });
+
+  function getCloseButton() {
+    let closeButton = document.querySelector('.close-button');
+    return closeButton;
+  }
 
   function getPercentSelect() {
     let percent = document.querySelector('.tip_percent');
