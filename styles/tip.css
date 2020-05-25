@@ -31,7 +31,11 @@ html, body {
 
 .alert-message {
   font-size: 1.6rem;
-  margin-top: 3rem;
+  margin-top: 1.75rem;
+  background: #ffaca9;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.4rem;
   display: none;
 }
 
@@ -43,6 +47,7 @@ html, body {
   font-size: 1.4rem;
   letter-spacing: var(--space-between-letters);
   border: none;
+  box-shadow: none;
 }
 
 /* set styles for disabled input fields */
@@ -59,9 +64,8 @@ html, body {
 /* styles for bill div */
 .bill_div {
   background: #eee;
-  border: 2px solid black;
+  border-radius: 0.5rem;
   text-align: center;
-  box-shadow: 1px 3px 5px #aaa;
   margin-top: 2.5rem;
   margin-bottom: 0;
   padding: 0 3rem;
@@ -133,6 +137,15 @@ html, body {
     margin-right: 1rem;
   }
 
+  .alert-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .alert-message {
+    max-height: 4rem;
+  }
+
   .submit_button {
     font-size: 1.8rem;
     width: 17rem;
@@ -141,6 +154,6 @@ html, body {
   .submit_button:hover {
     color: #337ab7;
     border: 0.1rem solid #337ab7;
-    background: #fff;
+    background: transparent;
   }
 }
