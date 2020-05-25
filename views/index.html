@@ -13,11 +13,9 @@
       <h1 class="text-center title">Tip Calculator</h1>
       <div class="row">
         <div class="form-group bill_div">
-
           <div class="bill_tip">
-            <p class="alert-message">Whoa there! You aren't leaving a tip...</p>
             <input class="form-control bill_amount" type="text" placeholder="Bill $0.00">
-            <select class=" form-control tip_percent">
+            <select class="form-control tip_percent">
               <option value="" selected disabled>Tip %</option>
               <option value="0">No Tip</option>
               <option value="5">5%</option>
@@ -26,6 +24,11 @@
               <option value="20">20%</option>
               <option value="25">25%</option>
             </select>
+          </div>
+
+          <div class="alert-container">
+            <p class="alert-message">Whoa there! You aren't leaving a tip...</p>
+            <button class="close-button" aria-label="Close" type="button">X</span>
           </div>
 
           <div class="tip_total">
