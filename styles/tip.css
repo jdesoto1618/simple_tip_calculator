@@ -29,6 +29,10 @@ html, body {
   margin: 0;
 }
 
+.alert-container {
+  position: relative;
+}
+
 .alert-message {
   font-size: 1.6rem;
   margin-top: 1.75rem;
@@ -37,6 +41,21 @@ html, body {
   color: white;
   border-radius: 0.4rem;
   display: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.25rem;
+  left: auto;
+  right: 0.1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  /* display: none; */
+}
+
+.close-button:focus {
+  outline: none;
 }
 
 .form-control {
